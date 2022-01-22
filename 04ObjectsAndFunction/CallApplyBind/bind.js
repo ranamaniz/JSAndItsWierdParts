@@ -27,5 +27,14 @@ var logPersonName = logName.bind(person); //we can access this of the person obj
 
 logPersonName(); //this.getFullName() is accessed
 
+// also we can do it on the fly 
+
+var logName = function () {
+  console.log(`Logged: ${this.getFullName()} ("Use bind on the Fly") `);
+}.bind(person)
+
+logName();
+
+
 
 
